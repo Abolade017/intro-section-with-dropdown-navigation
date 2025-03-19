@@ -1,2 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
+@theme {
+  --color-almost-white: hsl(0, 0%, 98%);
+  --color-medium-gray: hsl(0, 0%, 41%);
+  --color-almost-black: hsl(0, 0%, 8%);
+}
