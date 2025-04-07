@@ -47,7 +47,7 @@ const Home = () => {
           </div>
         </div>
         {/* right column */}
-        <div className="w-full md:w-1/4">
+        <div className="w-full md:w-1/2">
           <img
             src="/images/image-hero-desktop.png "
             alt="desktop-homepage-image"
