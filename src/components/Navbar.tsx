@@ -59,7 +59,7 @@ const Navbar = () => {
           className={
             open
               ? "fixed inset-0  bg-almost-black transparent opacity-65 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"
-              : ""
+              : "hidden"
           }
         ></div>
         <MobileCollapse close={() => setOpen((open = false))} open={!open} />

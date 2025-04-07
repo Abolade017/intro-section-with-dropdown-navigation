@@ -14,8 +14,8 @@ const MobileCollapse = ({ open, close }: propsType) => {
       }`}
     >
       <div className="flex min-h-full ">
-        <div className="w-1/3"></div>
-        <div className={"w-2/3 bg-white h-screen relative z-10  "}>
+        <div className="w-[36%]"></div>
+        <div className={"w-[64%] bg-white h-screen relative z-10  "}>
           <div className="px-4 pt-8">
             <button className="flex float-right" onClick={close}>
               <img
