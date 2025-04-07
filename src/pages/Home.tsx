@@ -1,31 +1,53 @@
 //@ts-ignore
-import React from "react";
-// import "../App.css";
+import React, { useState } from "react";
 const Home = () => {
   return (
     <div className=" max-w-7xl mx-auto">
-      <div className="flex md:flex-row flex-col-reverse items-center space-x-20 pt-20 ">
+      <div className="flex md:flex-row flex-col-reverse items-center space-x-0  md:space-x-20 pt-0 md:pt-20 ">
         {/* left column */}
-        <div className="w-1/2 pt-40  ">
-          <h1 className=" text-almost-black text-[5rem] font-bold leading-20 ">
-            Make <br /> remote work
+        <div className="w-full md:w-1/2 pt-10 md:pt-48">
+          <h1 className=" text-almost-black text-[2.2rem] md:text-[5.6rem] text-center md:text-start font-bold leading-normal md:leading-20  ">
+            Make remote work
           </h1>
-          <p className="py-14 text-medium-gray text-lg">
-            Get your team in sync. No matter your location <br /> streamline
-            processes. create team rituals, and <br /> watch productivity soar.
+          <p className="py-4 md:py-14 md:px-0 px-4 text-medium-gray md:text-start text-center text-[16px] md:text-lg">
+            <span className=" md:block  ">
+              Get your team in sync. No matter your location
+            </span>{" "}
+            <span className=" md:block">
+              streamline processes. create team rituals, and
+            </span>{" "}
+            <span>watch productivity soar.</span>
           </p>
-          <button className="bg-almost-black py-4 px-10 rounded-lg text-almost-white text-lg font-medium">
-            Learn more
-          </button>
-          <div className="flex space-x-8 items-center  pt-48">
-            <img src="/images/client-databiz.svg" alt="databiz-logo" />
-            <img src="/images/client-audiophile.svg" alt="audiophile-logo" />
-            <img src="/images/client-meet.svg" alt="meet-logo" />
-            <img src="/images/client-maker.svg" alt="maker-logo" />
+          <div className="flex justify-center md:block md:mt-0 mt-6">
+            <button className="bg-almost-black py-4 px-10 rounded-xl text-almost-white text-sm font-medium">
+              Learn more
+            </button>
+          </div>
+          <div className="flex space-x-4 md:space-x-8 items-center pt-10 md:pt-40 px-6 md:px-0 ">
+            <img
+              src="/images/client-databiz.svg"
+              alt="databiz-logo"
+              className="md:w-auto w-16"
+            />
+            <img
+              src="/images/client-audiophile.svg"
+              alt="audiophile-logo"
+              className="md:w-auto w-16"
+            />
+            <img
+              src="/images/client-meet.svg"
+              alt="meet-logo"
+              className="md:w-auto w-16"
+            />
+            <img
+              src="/images/client-maker.svg"
+              alt="maker-logo"
+              className="md:w-auto w-16"
+            />
           </div>
         </div>
         {/* right column */}
-        <div className="w-1/2 ">
+        <div className="w-full md:w-1/2">
           <img
             src="/images/image-hero-desktop.png "
             alt="desktop-homepage-image"
@@ -34,7 +56,7 @@ const Home = () => {
           <img
             src="/images/image-hero-mobile.png"
             alt="mobile-homepage-image"
-            className="md:hidden block"
+            className="md:hidden block object-cover w-full h-full"
           />
         </div>
       </div>
