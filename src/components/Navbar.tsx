@@ -7,7 +7,6 @@ const Navbar = () => {
   let [open, setOpen] = useState(false);
   const mobileNav = () => {
     setOpen((open = true));
-    console.log(open);
   };
   return (
     <div className="relative">
