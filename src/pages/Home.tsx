@@ -6,7 +6,7 @@ const Home = () => {
       <div className="flex md:flex-row flex-col-reverse items-center space-x-0  md:space-x-20 pt-0 md:pt-20 ">
         {/* left column */}
         <div className="w-full md:w-1/2 pt-10 md:pt-36 ">
-          <h1 className=" text-almost-black text-[34px] md:text-[6.2rem] text-center md:text-start font-bold leading-normal  md:leading-24  ">
+          <h1 className=" text-almost-black text-[34px] md:text-[5.6rem] text-center md:text-start font-bold leading-normal  md:leading-24  ">
             Make remote work
           </h1>
           <p className="py-4 md:py-14 md:px-0 px-5 text-medium-gray md:text-start text-center text-[15px] md:text-lg">
