@@ -23,7 +23,7 @@ const Home = () => {
               Learn more
             </button>
           </div>
-          <div className="flex  space-x-6 md:space-x-8 items-center pt-10 md:pt-[9rem] px-4 md:px-0 ">
+          <div className="flex  space-x-6 md:space-x-8 items-center pt-10 md:pt-[10.5rem] px-4 md:px-0 ">
             <img
               src="/images/client-databiz.svg"
               alt="databiz-logo"
