@@ -4,20 +4,25 @@ import { Link } from "react-router";
 interface propsType {
   open: boolean;
   close: any;
+  openCompanyDropdown: any;
+  openFeatureDropdown: any;
+  openCompany: any;
+  openFeature: any;
 }
-const MobileCollapse = ({ open, close }: propsType) => {
-  let [openFeature, setOpenFeature] = useState(false);
-  let [openCompany, setOpenCompany] = useState(false);
-  const openFeatureDropdown = () => {
-    setOpenFeature(!openFeature);
-  };
-  const openCompanyDropdown = () => {
-    setOpenCompany(!openCompany);
-  };
+const MobileCollapse = ({
+  open,
+  close,
+  openCompanyDropdown,
+  openFeatureDropdown,
+  openCompany,
+  openFeature,
+}: propsType) => {
   return (
     <div
       className={`${
-        open ? "hidden" : "fixed inset-0 z-10 w-screen overflow-y-auto"
+        open
+          ? "hidden"
+          : "fixed inset-0 z-10 w-screen overflow-y-auto md:hidden"
       }`}
     >
       <div className="flex min-h-full ">
@@ -32,21 +37,29 @@ const MobileCollapse = ({ open, close }: propsType) => {
               />
             </button>
           </div>
-          <div className="flex flex-col space-y-4 pt-16 px-4 ">
+          <ul className="flex flex-col space-y-4 pt-16 px-4 ">
             <div className="flex space-x-3 items-center">
-              <Link to="/features" className="text-medium-gray">
+              <li className="text-medium-gray hover:text-almost-black">
                 Features
-              </Link>
+              </li>
               <button className="outline-none" onClick={openFeatureDropdown}>
                 <img
                   src="/images/icon-arrow-down.svg"
                   alt="menu-arrow-down-icon"
-                  className={openFeature ? "hidden" : "text-medium-gray"}
+                  className={
+                    openFeature
+                      ? "hidden"
+                      : "text-medium-gray hover:text-almost-black"
+                  }
                 />
                 <img
                   src="/images/icon-arrow-up.svg"
                   alt="menu-arrow-down-icon"
-                  className={openFeature ? "text-medium-gray" : "hidden"}
+                  className={
+                    openFeature
+                      ? "text-medium-gray hover:text-almost-black"
+                      : "hidden"
+                  }
                 />
               </button>
             </div>
@@ -56,45 +69,69 @@ const MobileCollapse = ({ open, close }: propsType) => {
               }
             >
               <div className="flex space-x-2 items-center">
-                <div>
-                  <img src="/images/icon-todo.svg" alt="todo-icon" />
+                <div className="">
+                  <img
+                    src="/images/icon-todo.svg"
+                    alt="todo-icon"
+                    className="w-3"
+                  />
                 </div>
                 <div className="text-medium-gray">Todo List</div>
               </div>
               <div className="flex space-x-2 items-center">
                 <div>
-                  <img src="/images/icon-calendar.svg" alt="calendar-icon" />
+                  <img
+                    src="/images/icon-calendar.svg"
+                    alt="calendar-icon"
+                    className="w-3"
+                  />
                 </div>
                 <div className="text-medium-gray">Calendar</div>
               </div>
               <div className="flex space-x-2 items-center">
                 <div>
-                  <img src="/images/icon-reminders.svg" alt="reminder-icon" />
+                  <img
+                    src="/images/icon-reminders.svg"
+                    alt="reminder-icon"
+                    className="w-3"
+                  />
                 </div>
                 <div className="text-medium-gray">Reminder</div>
               </div>
               <div className="flex space-x-2 items-center">
                 <div>
-                  <img src="/images/icon-planning.svg" alt="planning-icon" />
+                  <img
+                    src="/images/icon-planning.svg"
+                    alt="planning-icon"
+                    className="w-3"
+                  />
                 </div>
                 <div className="text-medium-gray">Planning</div>
               </div>
             </div>
             <div className="flex space-x-3 items-center">
-              <Link to="/company" className="text-medium-gray">
+              <li className="text-medium-gray hover:text-almost-black">
                 Company
-              </Link>
+              </li>
 
               <button className="outline-none" onClick={openCompanyDropdown}>
                 <img
                   src="/images/icon-arrow-down.svg"
                   alt="menu-arrow-down-icon"
-                  className={openCompany ? "text-medium-gray -pl-2" : "hidden"}
+                  className={
+                    openCompany
+                      ? "hidden"
+                      : "text-medium-gray -pl-2 hover:text-almost-black"
+                  }
                 />
                 <img
                   src="/images/icon-arrow-up.svg"
                   alt="menu-arrow-up-icon"
-                  className={openCompany ? "hidden" : "text-medium-gray -pl-2"}
+                  className={
+                    openCompany
+                      ? "text-medium-gray -pl-2 hover:text-almost-black"
+                      : "hidden"
+                  }
                 />
               </button>
             </div>
@@ -103,26 +140,35 @@ const MobileCollapse = ({ open, close }: propsType) => {
                 openCompany ? "flex flex-col space-y-3 pl-6" : "hidden"
               }
             >
-              <div className="text-medium-gray">history</div>
+              <div className="text-medium-gray">History</div>
               <div className="text-medium-gray">Our Team</div>
               <div className="text-medium-gray">Blog</div>
             </div>
-            <Link to="/careers" className="text-medium-gray">
-              Careers
+            <Link to="/careers">
+              <li className="text-medium-gray hover:text-almost-black">
+                {" "}
+                Careers
+              </li>
             </Link>
-            <Link to="/about" className="text-medium-gray">
-              About
+            <Link to="/about">
+              <li className="text-medium-gray hover:text-almost-black">
+                {" "}
+                About
+              </li>
             </Link>
-          </div>
+          </ul>
           <div className="flex flex-col justify-center items-center">
             <div>
               {" "}
-              <Link to="/login" className="text-medium-gray ">
+              <Link
+                to="/login"
+                className="text-medium-gray hover:text-almost-black "
+              >
                 Login
               </Link>
             </div>
             <Link to="/register">
-              <button className="text-medium-gray border border-almost-black rounded-2xl h-10 mt-4 px-18 py-2.5 text-center">
+              <button className="text-medium-gray border border-almost-black rounded-2xl h-10 mt-4 px-18 py-2.5 text-center hover:text-almost-black">
                 {" "}
                 Register
               </button>

@@ -5,8 +5,8 @@ const Home = () => {
     <div className=" max-w-7xl mx-auto">
       <div className="flex md:flex-row flex-col-reverse items-center space-x-0  md:space-x-20 pt-0 md:pt-20 ">
         {/* left column */}
-        <div className="w-full md:w-1/2 pt-10 md:pt-48 ">
-          <h1 className=" text-almost-black text-[34px] md:text-[5.6rem] text-center md:text-start font-bold leading-normal  md:leading-20  ">
+        <div className="w-full md:w-1/2 pt-10 md:pt-36 ">
+          <h1 className=" text-almost-black text-[34px] md:text-[6.2rem] text-center md:text-start font-bold leading-normal  md:leading-24  ">
             Make remote work
           </h1>
           <p className="py-4 md:py-14 md:px-0 px-5 text-medium-gray md:text-start text-center text-[15px] md:text-lg">
@@ -19,11 +19,11 @@ const Home = () => {
             <span>watch productivity soar.</span>
           </p>
           <div className="flex justify-center md:block md:mt-0 mt-6">
-            <button className="bg-almost-black md:py-4 py-3 px-8 rounded-xl text-almost-white text-sm font-medium">
+            <button className="bg-almost-black hover:bg-almost-white md:py-4 py-3 px-8 rounded-xl text-almost-white hover:text-almost-black hover:ring hover:ring-almost-black text-sm font-medium">
               Learn more
             </button>
           </div>
-          <div className="flex justify-center space-x-6 md:space-x-8 items-center pt-10 md:pt-40 px-4 md:px-0 ">
+          <div className="flex justify-center space-x-6 md:space-x-8 items-center pt-10 md:pt-44 px-4 md:px-0 ">
             <img
               src="/images/client-databiz.svg"
               alt="databiz-logo"
